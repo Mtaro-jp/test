@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ページタイトル</title>
+    <style>
+        /* cssを書くところ */
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!--実際に表示される領域-->
+    <input id="input">
+    <div id="output"></div>
+
+    <script>
+        // JavaScript書くところ
+        const input = document.getElementById("input");
+        input.addEventListener("keydown", (event) => {
+            console.log(event);
+            if (event.code === "Enter") {
+                const output = document.getElementById("output");
+                output.innerHTML += `<b>${input.value}</b><br>`;
+                input.value = "";
+            }
+        })
+
+    </script>
+</body>
+
+</html>
